@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Metadata</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+      #functionButtons {
+        display: flex-inline;
+      }
+      .button {
+        width: 32.82%;
+        background-color: #d3d3d3;
+      }
+      .timeFrameButton {
+        display: none;
+      }
+
+      .activeTimeFrame,
+      .activeFunctionButton {
+        background-color: #b1eeeb;
+      }
+
+      #audioFeature {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #audioFeaturesList {
+        padding: 0;
+      }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="authentication.js" defer></script>
+    <link rel="stylesheet" href="https://use.typekit.net/aox5zmy.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="container">
+    <p
+      id="heading"
+      onclick=" 
+      clearPage();  
+      requestPromises(topArtists, urls.topArtists);
+      topArtists();
+      loadArtistGenreData(HREFs);"
+    ></p>
+
+    <div id="main">
+      <p id="homeDescription"></p>
+
+      <div id="audioFeatureInfo">
+        <div class="padded" id="featuresDescription"></div>
+        <ul class="padded" id="audioFeaturesList"></ul>
+      </div>
+
+      <p class="p-green" id="percent"></p>
+      <p class="p-green padded" id="extraInfo"></p>
+      <div id="squig"></div>
+
+      <p class="p-green padded" id="genres"></p>
+      <p class="p-pink padded reg" id="readMore"></p>
+
+      <div id="readMoreSvg"></div>
+
+      <h2
+        class="p-green"
+        style="font-weight: 400; margin-left: 25px; font-size: 30px"
+        id="artistTitle"
+      ></h2>
+
+      <p class="p-green padded" id="select" style="margin-bottom: 40px"></p>
+
+      <ol id="dataList" class="list-group"></ol>
+    </div>
+
+    <div id="otherArtists" class="p-pink padded"></div>
+
+    <!-- //artist info page -->
+    <div id="artistInfo">
+      <div
+        id="artistPhoto"
+        style="
+          width: 100%;
+          height: 40vw;
+          background-position: top;
+          background-size: cover;
+        "
+      ></div>
+      <h1 id="artistName"></h1>
+      <p id="artistFollowers""></p>
+      <p id="artistPopularity"></p>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

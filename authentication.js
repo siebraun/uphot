@@ -23,11 +23,11 @@ const authEndpoint = "https://accounts.spotify.com/authorize";
 //## Oauth header items
 const clientId = "8a4b95979af84798b6ed958934fc2296";
 // const redirectUri = 'https://spotify-metadata.netlify.app/';
-const redirectUri = "http://localhost:5500/";
+const redirectUri = "http://siebraun.github.io/uphot";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
-const loginURL = "http://localhost:5500/login.html";
+const loginURL = "http://siebraun.github.io/login.html";
 
 //if no token and not on login page, redirect to login
 if (!_token && window.location != loginURL) {

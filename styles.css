@@ -75,6 +75,12 @@ li:before {
   padding-right: 40px;
 }
 
+.line {
+  border-top: 1px #d7ed59 solid;
+
+  /* height: 0.5px; */
+}
+
 #heading {
   height: 65px;
   border-bottom: #d7ed59 solid 1px;
@@ -106,6 +112,13 @@ li:before {
   margin-top: 30%;
 }
 
+#artistSquig {
+  width: 60vw;
+  height: 50px;
+  background-size: cover;
+  /* background-color: purple; */
+}
+
 #Group_10 {
   margin-left: -30px;
   margin-top: -20px;
@@ -114,6 +127,48 @@ li:before {
 #Layer_1 {
   margin-top: 20px;
   margin-left: 100px;
+}
+
+#Layer_3 {
+  position: absolute;
+  width: 120px;
+  top: 70%;
+  right: 0;
+}
+
+#loginStar img {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  margin-top: 150px;
+}
+
+#lineStar {
+  width: 70px;
+  height: 70px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+#listStar {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 160%;
+  right: 0;
+  pointer-events: none;
+}
+
+#listSparkle {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
 }
 
 #a {

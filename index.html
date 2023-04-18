@@ -55,6 +55,8 @@
   <body class="container">
     <p
       id="heading"
+      class="p-green"
+      style="display: flex; align-items: center"
       onclick=" 
       clearPage();  
       requestPromises(topArtists, urls.topArtists);
@@ -78,6 +80,8 @@
       <p class="p-pink padded reg" id="readMore"></p>
 
       <div id="readMoreSvg"></div>
+      <div id="line"></div>
+      <div id="lineStar"></div>
 
       <h2
         class="p-green"
@@ -88,9 +92,11 @@
       <p class="p-green padded" id="select" style="margin-bottom: 40px"></p>
 
       <ol id="dataList" class="list-group"></ol>
+      <div id="listStar"></div>
     </div>
 
     <div id="otherArtists" class="p-pink padded"></div>
+    <div id="listSparkle"></div>
 
     <!-- //artist info page -->
     <div id="artistInfo">
@@ -98,14 +104,17 @@
         id="artistPhoto"
         style="
           width: 100%;
-          height: 40vw;
+          height: 30vh;
           background-position: top;
           background-size: cover;
+          margin-top: -200px;
         "
       ></div>
-      <h1 id="artistName"></h1>
-      <p id="artistFollowers""></p>
-      <p id="artistPopularity"></p>
+      <h1 id="artistName" class="p-green"></h1>
+      <div id="artistSquig"></div>
+      <div id="artistFollowers" class="padded"></div>
+      <div id="artistStar"></div>
+      <div id="artistPopularity" class="padded"></div>
     </div>
 
     <script src="app.js" defer></script>

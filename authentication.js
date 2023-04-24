@@ -30,7 +30,10 @@ const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 const loginURL = "http://siebraun.github.io/uphot/login.html";
 
 //if no token and not on login page, redirect to login
-if (!_token && window.location != loginURL) {
+if (
+  !_token &&
+  window.location != `https://siebraun.github.io/uphot/login.html`
+) {
   console.log("not login");
   window.location = loginURL;
 }

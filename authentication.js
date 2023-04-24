@@ -27,7 +27,7 @@ const redirectUri = "http://siebraun.github.io/uphot";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
-const loginURL = "http://siebraun.github.io/login.html";
+const loginURL = "http://siebraun.github.io/uphot/login.html";
 
 //if no token and not on login page, redirect to login
 if (!_token && window.location != loginURL) {

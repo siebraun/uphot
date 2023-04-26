@@ -47,7 +47,7 @@ function sendToAuth() {
 }
 
 // *******************************************************************
-// AUTHENTICATION ENDS
+// SPOTIFY VARIABLES
 //  ********************************************************************
 let urls = {
   topArtists: "https://api.spotify.com/v1/me/top/artists",
@@ -60,7 +60,9 @@ let queryParams = {
   offset: "0",
 };
 
-// routing
+// *******************************************************************
+// ROUTING
+//  ********************************************************************
 $(document).ready((e) => {
   requestPromises(topArtists, urls.topArtists);
 
@@ -68,7 +70,9 @@ $(document).ready((e) => {
   loadArtistGenreData(HREFs);
 });
 
-// ## Functions to make request using the token
+// *******************************************************************
+// MAKE REQUEST W/ TOKEN
+//  ********************************************************************
 function spotifyRequest(url) {
   return new Promise((resolve, reject) => {
     $.ajax({
@@ -102,12 +106,28 @@ function requestPromises(func, url) {
     });
 }
 
-//## Function that parses/displays user topArtists data, also calls hipsterRating func.
+// // *******************************************************************
+// DISPLAYING USER'S ARTIST DATA
+//  ********************************************************************
+
+//determine popularity
+function hipsterRating(data) {
+  let popularityRating = 0;
+  data.items.forEach((artist) => {
+    popularityRating += artist.popularity;
+  });
+  popularityRating = (popularityRating / data.items.length).toFixed(0);
+  return popularityRating;
+}
+
 var topArtists = (data) => {
   clearPage();
 
   let popularityRating = hipsterRating(data);
+
+  //put details on page
   document.querySelector("#percent").innerHTML = `${popularityRating}<b>%</b>`;
+
   document.querySelector(
     "#extraInfo"
   ).innerHTML = `of Spotify listeners <b>haven't</b> heard of your top artists. `;
@@ -172,13 +192,12 @@ var topArtists = (data) => {
   document.querySelector("#readMoreSvg").innerHTML = `      
 `;
 
-  //ARTIST LIST FUNCTIONS
+  //list artists
   var obscureArtistsArr = data.items.sort((a, b) =>
     a.popularity > b.popularity ? 1 : -1
   );
 
   let obscureArtists = obscureArtistsArr.slice(0, 3);
-  // console.log(data.items);
 
   obscureArtists.map((artist) => {
     let item = $(
@@ -199,18 +218,16 @@ var topArtists = (data) => {
 
     $("#listSparkle").css("background-image", "url(sparkle.png)");
 
-    // ----------------------------
-
-    //BEGIN ARTIST DETAILS PAGE
-
-    // ----------------------------
+    // *******************************************************************
+    // ARTIST DETAILS PAGE
+    //  ********************************************************************
 
     //on artist click, take user to artist page
     item.on("click", function () {
-      console.log(this.id);
-
+      // console.log(this.id);
       clearPage();
 
+      //add content
       document.querySelector("#heading").innerHTML = `&#8592; back`;
 
       $("#artistPhoto").css(
@@ -241,6 +258,7 @@ var topArtists = (data) => {
     });
   });
 
+  //set vars for "other" artists
   var otherArtist1 = data.items[3].name;
   var otherArtist2 = data.items[4].name;
   var otherArtist3 = data.items[5].name;
@@ -251,6 +269,7 @@ var topArtists = (data) => {
   );
   otherAritstText.appendTo($("#otherArtists"));
 
+  //get genres
   var genre1 = data.items[0].genres[0];
   var genre2 = data.items[1].genres[0];
   var genre3 = data.items[2].genres[0];
@@ -262,16 +281,9 @@ var topArtists = (data) => {
 };
 
 //
-
-function hipsterRating(data) {
-  let popularityRating = 0;
-  data.items.forEach((artist) => {
-    popularityRating += artist.popularity;
-  });
-  popularityRating = (popularityRating / data.items.length).toFixed(0);
-  return popularityRating;
-}
-
+// ******************************************************
+// CLEAR PAGE
+// *****************************************************
 function clearPage() {
   console.log("hi");
   document.querySelector("#dataList").innerHTML = "";

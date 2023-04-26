@@ -32,7 +32,7 @@ const loginURL = `https://siebraun.github.io/uphot/login.html`;
 //if no token and not on login page, redirect to login
 if (!_token && window.location != loginURL) {
   console.log("not login");
-  window.location = `https://siebraun.github.io/uphot/login.html`;
+  window.location = loginURL;
 }
 
 //on click, send user to spotify auth flow

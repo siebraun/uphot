@@ -13,7 +13,7 @@ let queryParams = {
 $(document).ready((e) => {
   requestPromises(topArtists, urls.topArtists);
 
-  topArtists();
+  // topArtists();
   loadArtistGenreData(HREFs);
 });
 
@@ -222,6 +222,7 @@ function hipsterRating(data) {
 }
 
 function clearPage() {
+  console.log("hi");
   document.querySelector("#dataList").innerHTML = "";
   document.querySelector("#featuresDescription").innerHTML = "";
   document.querySelector("#audioFeaturesList").innerHTML = "";

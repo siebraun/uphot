@@ -2,7 +2,6 @@
 // AUTHENTICATION BEGINS
 // *********************************************************************
 
-//## Get the token from the URL
 const urlHash = window.location.hash
   .substring(1)
   .split("&")
@@ -31,13 +30,10 @@ const redirectUri = "https://uphot.netlify.app/callback";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
-// const loginURL = "https://uphot.netlify.app";
-
-//if no token and not on login page, redirect to login
-// if (!_token && window.location != loginURL) {
-//   console.log("not login");
-//   window.location = loginURL;
-// }
+//## If there is no token, redirect to Spotify authorization
+if (!_token) {
+  sendToAuth();
+}
 
 //on click, send user to spotify auth flow
 function sendToAuth() {

@@ -25,7 +25,7 @@ const _token = urlHash.access_token;
 const authEndpoint = "https://accounts.spotify.com/authorize";
 
 //## Oauth header items
-const clientId = "8a4b95979af84798b6ed958934fc2296";
+const clientId = "f30f07ac434d4489a98513c2447cf01c";
 // const redirectUri = 'https://spotify-metadata.netlify.app/';
 const redirectUri = "https://uphot.netlify.app/callback";
 

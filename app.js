@@ -31,9 +31,9 @@ const redirectUri = "https://uphot.netlify.app/callback";
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
 //## If there is no token, redirect to Spotify authorization
-if (!_token) {
-  sendToAuth();
-}
+// if (!_token) {
+//   sendToAuth();
+// }
 
 //on click, send user to spotify auth flow
 function sendToAuth() {

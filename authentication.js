@@ -27,12 +27,12 @@ const redirectUri = "https://siebraun.github.io/uphot/callback/";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
-const loginURL = `https://siebraun.github.io/login.html`;
+const loginURL = `https://siebraun.github.io/uphot/login.html`;
 
 //if no token and not on login page, redirect to login
 if (!_token && window.location != loginURL) {
   console.log("not login");
-  window.location = `https://siebraun.github.io/login.html`;
+  window.location = `https://siebraun.github.io/uphot/login.html`;
 }
 
 //on click, send user to spotify auth flow

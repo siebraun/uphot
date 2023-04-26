@@ -242,4 +242,5 @@ function clearPage() {
   document.querySelector("#artistSquig").innerHTML = "";
   document.querySelector("#otherArtists").innerHTML = "";
   document.querySelector("#line").innerHTML = "";
+  document.querySelector("#login").innerHTML = "";
 }

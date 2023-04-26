@@ -27,7 +27,7 @@ const redirectUri = "https://uphot.netlify.app/callback";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
-const loginURL = "uphot.netlify.app/login.html";
+const loginURL = "https://uphot.netlify.app/login.html";
 
 //if no token and not on login page, redirect to login
 if (!_token && window.location != loginURL) {

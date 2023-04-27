@@ -24,22 +24,17 @@ const _token = urlHash.access_token;
 const authEndpoint = "https://accounts.spotify.com/authorize";
 
 //## Oauth header items
-const clientId = "f30f07ac434d4489a98513c2447cf01c";
+const clientId = "8a4b95979af84798b6ed958934fc2296";
 // const redirectUri = 'https://spotify-metadata.netlify.app/';
 const redirectUri = "https://uphot.netlify.app/callback";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 
-//## If there is no token, redirect to Spotify authorization
-// if (!_token) {
-//   sendToAuth();
-// }
-
 //on click, send user to spotify auth flow
 function sendToAuth() {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
-  )}&response_type=token&show_dialog=false`;
+  )}&response_type=token&show_dialog=true`;
 }
 
 // *******************************************************************

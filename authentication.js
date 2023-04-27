@@ -67,7 +67,7 @@ const authEndpoint = "https://accounts.spotify.com/authorize";
 //## Oauth header items
 const clientId = "8a4b95979af84798b6ed958934fc2296";
 // const redirectUri = 'https://spotify-metadata.netlify.app/';
-const redirectUri = "https://uphot.netlify.app/login";
+const redirectUri = "https://uphot.netlify.app/";
 
 const scopes = ["user-top-read", "playlist-read-private", "user-library-read"];
 

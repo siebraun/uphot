@@ -253,6 +253,8 @@ function clearPage() {
   document.querySelector("#readMoreSvg").innerHTML = "";
   $("#listSparkle").css("background-image", "");
   $("#artistStar").css("background-image", "");
+  $("#artistSquig").css("background-image", "");
+  $("#listStar").css("background-image", "");
   document.querySelector("#artistSquig").innerHTML = "";
   document.querySelector("#otherArtists").innerHTML = "";
   document.querySelector("#line").innerHTML = "";

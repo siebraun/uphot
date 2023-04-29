@@ -11,3 +11,4 @@ UPHOT was made with the Spotify Web API, the spotify-web-api-js wrapper, JavaScr
 
 # Find your Obscurity Rating
 https://uphot.netlify.app/login.html
+(best viewed on a phone or in mobile inspector mode!)

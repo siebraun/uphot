@@ -251,7 +251,8 @@ function clearPage() {
   document.querySelector("#select").innerHTML = "";
   document.querySelector("#squig").innerHTML = "";
   document.querySelector("#readMoreSvg").innerHTML = "";
-  document.querySelector("#listSparkle").innerHTML = "";
+  $("#listSparkle").css("background-image", "");
+  $("#artistStar").css("background-image", "");
   document.querySelector("#artistSquig").innerHTML = "";
   document.querySelector("#otherArtists").innerHTML = "";
   document.querySelector("#line").innerHTML = "";

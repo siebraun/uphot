@@ -187,3 +187,9 @@ li:before {
   line-height: 0px;
   margin-left: -5%;
 }
+
+#artistFollowers,
+#artistPopularity {
+  color: #d7ed59;
+  font-size: 60px;
+}

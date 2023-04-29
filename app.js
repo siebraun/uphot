@@ -160,8 +160,8 @@ var topArtists = (data) => {
         artist.followers.total + `      <p class="p-pink">Followers</p>`;
 
       //show popularity
-      document.querySelector("#artistPopularity").innerHTML =
-        artist.popularity + `      <p class="p-pink">Popularity</p>`;
+      document.querySelector("#artistPopularity").innerHTML = ``;
+      artist.popularity + `      <p class="p-pink">Popularity</p>`;
     });
   });
 
@@ -215,4 +215,5 @@ function clearPage() {
   document.querySelector("#squig").innerHTML = "";
   document.querySelector("#readMoreSvg").innerHTML = "";
   document.querySelector("#otherArtists").innerHTML = "";
+  document.querySelector("#login").innerHTML = "";
 }
